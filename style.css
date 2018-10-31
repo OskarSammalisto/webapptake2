@@ -1,0 +1,54 @@
+body{
+    background-size: cover;
+    background: url("anfield.jpg") no-repeat center center;
+
+}
+
+#match{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#crest{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#guess{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guesstable{
+    background-color: blue;
+}
+
+tbody{
+    background-color: blue;
+}
+
+thead{
+    background-color: saddlebrown;
+    text-align: center;
+}

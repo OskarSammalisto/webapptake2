@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>webapp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-sm-3" id="crest"><img src="livcrest.png" class="img-responsive" width="125" height="175"></div>
+    <div class="col-sm-6" id="match"><img src="watliv.jpg" class="img-responsive"></div>
+    <div class="col-sm-3" id="user"><img src="clipart2103074456.png" class="img-responsive" width="125" height="175"></div>
+
+</div>
+<div class="row">
+    <div class="col-sm-3" id="guess"><form action="http://primat.se/services/sendform.aspx?recipient=johnbonham8888@gmail.com" method="post">
+        <table class="table table-bordered table-striped">
+
+            <thead>
+            <tr>
+                <th colspan="2">Guessboard</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Home team goals: </td>
+                <td><input name="Goals Home" type="number" min="0" max="99"></td>
+            </tr>
+            <tr>
+                <td>Away team goals: </td>
+                <td><input name="Goals Away" type="number" min="0" max="99"></td>
+            </tr>
+            <tr>
+                <td>Minute of first goal: </td>
+                <td><input name="First Goal Minute" type="number" min="1" max="90"></td>
+            </tr>
+            <tr>
+                <td>Number of yellows: </td>
+                <td><input name="Number Of Yellows" type="number" min="0" max="99"></td>
+            </tr>
+            <tr>
+
+                <td colspan="2" align="centre" ><select name="FirstGoalscorer" title="FirstGoalscorer">
+                    <option value="0">First Goalscorer</option>
+                    <option value="1">No Goals</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td> Will there be a red card? </td>
+                <td><input type="radio" name="Red Card" id="yes" value="Yes"/><label for="yes">Yes</label>
+                    <input type="radio" checked="checked" name="Red Card" id="no" value="Yes"/><label for="no">No</label></td>
+            </tr>
+
+            <tr>
+                <td class="confirmbutton" colspan="2">
+                    <button type="submit" value="Confirm">Confirm</button>
+                </td>
+            </tr>
+
+
+            </tbody>
+        </table>
+
+    </form></div>
+    <div class="col-sm-6" id="field"><img src="Field2.jpg"></div>
+    <div class="col-sm-3" id="score">
+        <table class="table table-bordered" class="score">
+            <thead>
+                <tr>
+                    <th colspan="2">Scoreboard</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                     <td>Your score:</td>
+                     <td>0</td>
+                 </tr>
+                 <tr>
+                     <td>Lineup score:</td>
+                     <td>0</td>
+                 </tr>
+                 <tr>
+                     <td>Result score:</td>
+                     <td>0</td>
+                 </tr>
+                 <tr>
+                     <td>Cards score:</td>
+                     <td>0</td>
+                 </tr>
+                 <tr>
+                     <td>Goalscorer score:</td>
+                     <td>0</td>
+                 </tr>
+                 <tr>
+                     <td>Goal minute score:</td>
+                     <td>0</td>
+                 </tr>
+
+
+            </tbody>
+
+
+        </table>
+
+    </div>
+</div>
+<div class="row">
+    ...
+</div>
+</div>
+</body>
+</html>
