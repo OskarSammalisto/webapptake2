@@ -41,8 +41,22 @@ body{
 
 }
 
-.responsive{
+@media (min-width: 1000px){
+    #field{
+
+        background: url("Field2.jpg") no-repeat center;
+        background-size: 60%;
+    }
+}
+
+.responsive1{
     max-width: 25%;
+    height: auto;
+}
+
+.responsive4{
+
+    max-width: 100%;
     height: auto;
 }
 #gkrow{
