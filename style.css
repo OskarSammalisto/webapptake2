@@ -1,6 +1,6 @@
 body{
     background-size: cover;
-    background: red url("anfield.jpg") no-repeat center center;
+    background: red url("anfield2.jpg") no-repeat center center;
 
 }
 
@@ -20,6 +20,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 #guess{
@@ -32,9 +33,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 
 
 
+
+}
+
+#header{
+    margin-top: 20px;
 }
 
 #score{
@@ -58,9 +65,3 @@ thead{
 
 
 
-#div1 {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
-}

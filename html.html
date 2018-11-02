@@ -10,30 +10,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="javascript.js"></script>
 
-    <script>
-        function allowDrop(ev) {
-            ev.preventDefault();
-        }
-
-        function drag(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function drop(ev) {
-            ev.preventDefault();
-            var data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-        }
-    </script>
 </head>
 <body>
 <div class="container-fluid">
-<div class="row">
-    <div class="col-sm-3" id="crest"><img src="livcrest.png" class="img-responsive" width="125" height="175"></div>
+<div class="row" id="header">
+    <div class="col-sm-3 d-none d-sm-block col-lg-3" align="center" id="crest"><img src="livcrest.png" class="img-responsive" width="125" height="175"></div>
 
 
 
-    <div class="container  col-sm-6" >
+    <div class="container  col-sm-6 col-xs-12 col-lg-6" align="center">
         <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -87,7 +72,7 @@
 
 
     <!--<div class="col-sm-6" id="match"><img src="watliv.jpg" class="img-responsive"></div>-->
-    <div class="col-sm-3" id="user"><img src="clipart2103074456.png" class="img-responsive" width="125" height="175"></div>
+    <div class="col-sm-3 d-none d-sm-block col-lg-3" align="center" id="user"><img src="clipart2103074456.png" class="img-responsive"  width="125" height="175"></div>
 
 </div>
 <div class="row">
@@ -100,6 +85,15 @@
             </tr>
             </thead>
             <tbody>
+            <tr>
+                <td colspan="2" align="centre" ><select name="Selectopponent" title="Selectopponent">
+                    <option value="" disabled selected>Select opponent.</option>
+                    <option value="PSG" >PSG</option>
+                    <option value="Everton" >Everton</option>
+                    <option value="Burnley" >Burnley</option>
+                    <option value="Leicester" >Leicester</option>
+                    <option value="Southampton" >Southampton</option>
+            </tr>
             <tr>
                 <td>Home team goals: </td>
                 <td><input name="Goals Home" type="number" min="0" max="99"></td>
@@ -118,11 +112,13 @@
             </tr>
             <tr>
 
-                <td colspan="2" align="centre" ><select name="FirstGoalscorer" title="FirstGoalscorer">
+                <td colspan="2" align="centre" >
+                    <select name="FirstGoalscorer" title="FirstGoalscorer" class="selectpicker">
                     <option value="0">First Goalscorer</option>
-                    <option value="1">No Goals</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="1" >No Goals</option>
+                    <option data-icon="glyphicon glyphicon-eye-open" value="2" >Adam Lallana</option>
+                    <option value="3" >Alberto Moreno</option>
+
                 </select></td>
             </tr>
             <tr>
@@ -144,6 +140,7 @@
     </form></div>
     <div class="col-sm-6" id="field">
         <div class="field"><img  src="Field2.jpg">
+
 
         </div>
     </div>
