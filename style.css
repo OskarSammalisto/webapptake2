@@ -27,16 +27,42 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 #field{
     display: flex;
-    align-items: center;
+
     justify-content: center;
     margin-top: 20px;
+    background: url("Field2.jpg") no-repeat center;
+    background-size: contain;
 
 
+}
 
+.responsive{
+    max-width: 25%;
+    height: auto;
+}
+#gkrow{
+height: 25%;
+
+}
+#dfrow{
+    height: 25%;
+
+}
+#mfrow{
+    height: 25%;
+
+}
+#strow{
+    height: 25%;
+
+}
+
+.player{
 
 }
 
@@ -48,6 +74,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .guesstable{
