@@ -1,6 +1,6 @@
 body{
     background-size: cover;
-    background: red url("anfield2.jpg") no-repeat center center;
+    background: darkred url("anfield2.jpg") no-repeat center center;
 
 }
 
@@ -39,14 +39,50 @@ body{
     background-size: contain;
 
 
+
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1600px){
     #field{
 
         background: url("Field2.jpg") no-repeat center;
         background-size: 60%;
+        height: 850px;
     }
+}
+
+@media (min-width: 1000px) and (max-width: 1590px){
+    #field{
+
+        background: url("Field2.jpg") no-repeat center;
+        background-size: 80%;
+        height: 806px;
+    }
+}
+
+@media (max-width: 999px){
+
+    #field{
+
+        background: url("Field2.jpg") no-repeat center;
+        background-size: 100%;
+        height: 806px;
+    }
+
+    .responsive1{
+        margin-top: 40px;
+
+    }
+    .responsive4{
+
+    }
+
+}
+
+
+
+.jumbotron{
+    background: url("red banner.png");
 }
 
 .responsive1{
@@ -92,16 +128,17 @@ height: 25%;
 }
 
 .guesstable{
-    background-color: blue;
+    background-color: darkred;
 }
 
 tbody{
-    background-color: blue;
+    background-color: darkred;
 }
 
 thead{
-    background-color: saddlebrown;
+    background: url("red banner.png");
     text-align: center;
+    color: antiquewhite;
 }
 
 
