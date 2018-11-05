@@ -9,14 +9,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="javascript.js"></script>
+
+
+
 
 </head>
 <body>
 <div class="container-fluid">
     <div class="jumbotron">
 <div class="row" id="header">
-    <div class="col-sm-3 d-none d-sm-block col-lg-3" align="center" id="crest"><img src="livcrest.png" class="img-responsive" width="125" height="175"></div>
+    <div class="col-sm-3 d-none d-sm-block  col-lg-3" align="center" id="crest"><img src="livcrest.png" class="img-responsive" width="125" height="175"></div>
 
 
 
@@ -77,13 +79,78 @@
     <div class="col-sm-3 d-none d-sm-block col-lg-3" align="center" id="user"><img src="clipart2103074456.png" class="img-responsive"  width="125" height="175"></div>
 
 </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#myModal">How to play?</button>
+            <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#myModal2">Scoring?</button>
+            <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#myModal3">Empty</button>
+        </div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">How to play the lineups and result guesser.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>First you select which match you want to guess on by selecting opponent.<br>
+                            Then you fill in the score and match events and select the lineup.<br>
+                            When you´re finished, press the confirm button.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="myModal2" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">How the scoring works.</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Scoring description obviously.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="myModal3" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Empty</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Empty.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
     <form action="http://primat.se/services/sendform.aspx?recipient=johnbonham8888@gmail.com" method="post">
 <div class="row">
 
-    <div class="col-sm-3 col-xs-12" id="guess">
+    <div class="col-sm-4 col-xs-12 col-lg-3" id="guess">
 
-        <table class="table table-bordered table-striped">
+        <table class="table table-bordered ">
 
             <thead>
             <tr>
@@ -160,7 +227,7 @@
             </tr>
 
             <tr>
-                <td class="confirmbutton" colspan="2">
+                <td class="confirmbutton" colspan="2" align="center">
                     <button type="submit" value="Confirm">Confirm</button>
                 </td>
             </tr>
@@ -171,7 +238,7 @@
 
 
     </div>
-    <div class="col-sm-6 col-xs-12" id="field">
+    <div class="col-sm-8 col-xs-12 col-lg-6" id="field">
         <div class="field">     <!--<img  src="Field2.jpg">-->
 
             <div class="row" id="gkrow">
@@ -248,6 +315,7 @@
                     </script>
 
                    <!-- <img src="liverpool players/Alisson.png" class="responsive"> -->
+
 
                 </div>
             </div>
@@ -961,8 +1029,8 @@
 
         </div>
     </div>
-    <div class="col-sm-3 col-xs-12" id="score">
-        <table class="table table-bordered table-striped score">
+    <div class="col-sm-12 col-xs-12 col-lg-3" id="score">
+        <table class="table table-bordered score">
             <thead>
                 <tr>
                     <th colspan="2">Scoreboard</th>
@@ -970,8 +1038,8 @@
             </thead>
             <tbody>
                  <tr>
-                     <td>Your score:</td>
-                     <td>0</td>
+                     <td class="yourscore">Your score:</td>
+                     <td class="yourscore">0</td>
                  </tr>
                  <tr>
                      <td>Lineup score:</td>
@@ -1008,6 +1076,6 @@
     ...
 </div>
 </div>
-
+<script src="javascript.js"></script>
 </body>
 </html>
