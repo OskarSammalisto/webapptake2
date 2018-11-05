@@ -1,6 +1,6 @@
 
 //Make the DIV element draggagle:
-dragElement(document.getElementById(""));
+dragElement(document.getElementById("")); //refId******
 
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -25,7 +25,7 @@ function dragElement(elmnt) {
 
     function elementDrag(e) {
         e = e || window.event;
-        e.preventDefault({ containment: document.getElementById('field')});
+        e.preventDefault({ containment: document.getElementById('field')}); //containment********
         // calculate the new cursor position:
         pos1 = pos3 - e.clientX;
         pos2 = pos4 - e.clientY;
