@@ -1,44 +1,81 @@
+// guessboard
 
-//Make the DIV element draggagle:
-dragElement(document.getElementById("")); //refId******
+var opponent = document.getElementById('opponent');
+var goalsLiverpool = document.getElementById('goalsLiverpool');
+var goalsOpponent = document.getElementById('goalsOpponent');
+var goalMinute = document.getElementById('goalMinute');
+var yellows = document.getElementById('yellows');
+var firstGoalscorer = document.getElementById('firstGoalscorer');
+var yesRed = document.getElementById('yesRed');
+var noRed = document.getElementById('noRed');
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "header")) {
-        /* if present, the header is where you move the DIV from:*/
-        document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    } else {
-        /* otherwise, move the DIV from anywhere inside the DIV:*/
-        elmnt.onmousedown = dragMouseDown;
+// scoreboard
+
+var totalScore = document.getElementById('totalScore');
+var lineupScore = document.getElementById('lineupScore');
+var resultScore = document.getElementById('resultScore');
+var cardsScore = document.getElementById('cardsScore');
+var goalScorerScore = document.getElementById('goalScorerScore');
+var goalMinuteScore = document.getElementById('goalMinuteScore');
+
+//functions
+
+function calculate() {
+    goalsLiverpoolFunction();
+    goalsOpponentFunction();
+    goalMinuteFunction();
+    yellowsFunction();
+    firstGoalscorerFunction();
+    yesRedFunction();
+}
+
+function goalsLiverpoolFunction() {
+    if((goalsLiverpool).value == 'Refer to resultsheet'){
+        resultScore.innerHTML = Number(resultScore.innerHTML) + 5;
+
+    }
+}
+
+function goalsOpponentFunction() {
+    if((goalsOpponent).value == 'refer to resultsheet'){
+        resultScore.innerHTML = Number(resultScore.innerHTML) + 5;
+    }
+}
+
+function goalMinuteFunction() {
+    if((goalMinute).value == 'refer to resultsheet'){
+        goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 20;
+    }
+    else if(('refer to resultsheet' - 5) <= (goalMinute).value < ('refer to resultsheet' + 5) ){
+        goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 10;
     }
 
-    function dragMouseDown(e) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
+    else if(('refer to resultsheet' - 10) < (goalMinute).value > ('refer to resultsheet' + 10) ){
+        goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 2;
+    }
+}
+
+function yellowsFunction() {
+    if((yellows).value == 'refer to resultsheet'){
+        cardsScore.innerHTML = Number(cardsScore.innerHTML) + 10;
+    }
+    else if('refer to resultsheet +2' <= (yellows).value <= 'refer to resultsheet +2'){
+        cardsScore.innerHTML = Number(cardsScore.innerHTML) + 5;
+    }
+}
+
+function firstGoalscorerFunction() {
+    if((firstGoalscorer).value == 'refer to resultsheet'){
+        goalScorerScore.innerHTML = Number(goalScorerScore.innerHTML) + 5;
+    }
+}
+
+function yesRedFunction() {
+    if((yesRed).value == 'refer to resultsheet'){
+        cardsScore.innerHTML = Number(cardsScore.innerHTML) + 10;
+    }
+    else {
+        cardsScore.innerHTML = Number(cardsScore.innerHTML) - 10;
     }
 
-    function elementDrag(e) {
-        e = e || window.event;
-        e.preventDefault({ containment: document.getElementById('field')}); //containment********
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        /* stop moving when mouse button is released:*/
-        document.onmouseup = null;
-        document.onmousemove = null;
-    }
 }

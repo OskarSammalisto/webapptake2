@@ -154,7 +154,7 @@
             </div>
         </div>
     </div>
-    <form action="http://primat.se/services/sendform.aspx?recipient=johnbonham8888@gmail.com" method="post">
+    <form>  <!--  action= "http://primat.se/services/sendform.aspx?recipient=johnbonham8888@gmail.com" method="post" -->
 <div class="row">
 
     <div class="col-sm-4 col-xs-12 col-lg-3" id="guess">
@@ -168,7 +168,7 @@
             </thead>
             <tbody>
             <tr>
-                <td colspan="2" align="centre" ><select name="Selectopponent" title="Selectopponent">
+                <td colspan="2" align="centre" ><select name="Selectopponent" title="Selectopponent" id="opponent">
                     <option value="" disabled selected>Select opponent.</option>
                     <option value="PSG" >PSG</option>
                     <option value="Everton" >Everton</option>
@@ -179,24 +179,24 @@
             </tr>
             <tr>
                 <td>Liverpool goals: </td>
-                <td><input name="Goals Liverpool" type="number" min="0" max="99"></td>
+                <td><input name="Goals Liverpool" id="goalsLiverpool" type="number" min="0" max="99"></td>
             </tr>
             <tr>
                 <td>Opponent goals: </td>
-                <td><input name="Goals Opponent" type="number" min="0" max="99"></td>
+                <td><input name="Goals Opponent" id="goalsOpponent" type="number" min="0" max="99"></td>
             </tr>
             <tr>
                 <td>Minute of first goal: </td>
-                <td><input name="First Goal Minute" type="number" min="1" max="90"></td>
+                <td><input name="First Goal Minute" id="goalMinute" type="number" min="1" max="90"></td>
             </tr>
             <tr>
                 <td>Number of yellows: </td>
-                <td><input name="Number Of Yellows" type="number" min="0" max="99"></td>
+                <td><input name="Number Of Yellows" id="yellows" type="number" min="0" max="99"></td>
             </tr>
             <tr>
 
                 <td colspan="2" align="centre" >
-                    <select name="FirstGoalscorer" title="FirstGoalscorer" class="selectpicker">
+                    <select name="FirstGoalscorer" id="firstGoalscorer" title="FirstGoalscorer" class="selectpicker">
                     <option value="0">First Goalscorer</option>
                     <option value="1" >No Goals</option>
                         <option value="1">Lallana</option>
@@ -231,13 +231,13 @@
             </tr>
             <tr>
                 <td> Will there be a red card? </td>
-                <td><input type="radio" name="Red Card" id="yes" value="Yes"/><label for="yes">Yes</label>
-                    <input type="radio" checked="checked" name="Red Card" id="no" value="Yes"/><label for="no">No</label></td>
+                <td><input type="radio" name="Red Card" id="yesRed" value="Yes"/><label for="yesRed">Yes</label>
+                    <input type="radio" checked="checked" name="Red Card" id="noRed" value="No"/><label for="noRed">No</label></td>
             </tr>
 
             <tr>
                 <td class="confirmbutton" colspan="2" align="center">
-                    <button type="submit" value="Confirm">Confirm</button>
+                    <input type="button" value="Calculate" onclick="calculate()" /> <!--Confirm</input>  <!-- type="submit"  -->
                 </td>
             </tr>
 
@@ -253,8 +253,8 @@
             <div class="row" id="gkrow">
                 <div class="col-xs-12 player" align="center"  id="gk">
 
-                    <img id="image" src='noplayer.png' class="responsive1"><br>
-                    <select name="GK" id="changeImage">
+                    <img id="image1" src='noplayer.png' class="responsive1"><br>
+                    <select name="GK" id="changeImage1">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -318,8 +318,8 @@
 
                         ];
 
-                        $('#changeImage').change(function(){
-                            $('#image')[0].src = imagesArray[this.value];
+                        $('#changeImage1').change(function(){
+                            $('#image1')[0].src = imagesArray[this.value];
                         });
                     </script>
 
@@ -1048,27 +1048,27 @@
             <tbody>
                  <tr>
                      <td class="yourscore">Your score:</td>
-                     <td class="yourscore">0</td>
+                     <td class="yourscore" id="totalScore">0</td>
                  </tr>
                  <tr>
                      <td>Lineup score:</td>
-                     <td>0</td>
+                     <td id="lineupScore">0</td>
                  </tr>
                  <tr>
                      <td>Result score:</td>
-                     <td>0</td>
+                     <td id="resultScore">0</td>
                  </tr>
                  <tr>
                      <td>Cards score:</td>
-                     <td>0</td>
+                     <td id="cardsScore">0</td>
                  </tr>
                  <tr>
                      <td>Goalscorer score:</td>
-                     <td>0</td>
+                     <td id="goalScorerScore">0</td>
                  </tr>
                  <tr>
                      <td>Goal minute score:</td>
-                     <td>0</td>
+                     <td id="goalMinuteScore">0</td>
                  </tr>
 
 
