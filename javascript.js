@@ -1,14 +1,14 @@
 // guessboard
 
 var opponent = document.getElementById('opponent');
-var goalsLiverpool = document.getElementById('goalsLiverpool');
+var goalsLiverpool = document.getElementById(('goalsLiverpool'));
 var goalsOpponent = document.getElementById('goalsOpponent');
 var goalMinute = document.getElementById('goalMinute');
 var yellows = document.getElementById('yellows');
 var firstGoalscorer = document.getElementById('firstGoalscorer');
 var yesRed = document.getElementById('yesRed');
 var noRed = document.getElementById('noRed');
-var lineup = document.getElementsByClassName('starting11');
+var starting11 = document.getElementsByClassName(('starting11').value);
 
 // scoreboard
 
@@ -19,10 +19,53 @@ var cardsScore = document.getElementById('cardsScore');
 var goalScorerScore = document.getElementById('goalScorerScore');
 var goalMinuteScore = document.getElementById('goalMinuteScore');
 
+var lineupTrue;
+var goalsLiverpoolTrue;
+var goalsOpponentTrue;
+var goalMinuteTrue;
+var yellowsTrue;
+var firstGoalscorerTrue;
+var yesRedTrue;
+var noRedTrue = 0;
+ console.log(opponent);
 //functions
 
+// match results
+function matchResults() {
+
+
+
+    if(opponent.value == 1 /*psg*/){
+         goalsLiverpoolTrue = 3;
+         goalsOpponentTrue = 2;
+         goalMinuteTrue = 30;
+         yellowsTrue = 2;
+         firstGoalscorerTrue = 8;
+         yesRedTrue = 'yes';
+         noRedTrue = 0;
+         lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 7, 23];
+
+    }
+    else if(opponent.value == 2 /*everton*/){
+
+    }
+
+    else if(opponent.value == 3 /*burnley*/){
+
+    }
+
+    else if(opponent.value == 4 /*leicester*/){
+
+    }
+
+    else if(opponent.value == 5 /*southampton*/){
+
+    }
+}
+
+
 function calculate() {
-    matchResults();
+
     goalsLiverpoolFunction();
     goalsOpponentFunction();
     goalMinuteFunction();
@@ -41,48 +84,54 @@ function totalScoreSum() {
 }
 
 function goalsLiverpoolFunction() {
-    if((goalsLiverpool).value == goalsLiverpool){
+    matchResults();
+    if((goalsLiverpool).value == goalsLiverpoolTrue){
         resultScore.innerHTML = Number(resultScore.innerHTML) + 5;
 
     }
 }
 
 function goalsOpponentFunction() {
-    if((goalsOpponent).value == goalsOpponent){
+    matchResults();
+    if((goalsOpponent).value == goalsOpponentTrue){
         resultScore.innerHTML = Number(resultScore.innerHTML) + 5;
     }
 }
 
 function goalMinuteFunction() {
-    if((goalMinute).value == goalMinute){
+    matchResults();
+    if((goalMinute).value == goalMinuteTrue){
         goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 20;
     }
-    else if((goalMinute - 5) <= (goalMinute).value < (goalMinute + 5) ){
+    else if((goalMinuteTrue - 5) >= (goalMinute).value <= (goalMinuteTrue + 5) ){
         goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 10;
     }
 
-    else if((goalMinute - 10) < (goalMinute).value > (goalMinute + 10) ){
+    else if((goalMinuteTrue - 10) >= (goalMinute).value <= (goalMinuteTrue + 10) ){
         goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 2;
     }
 }
 
 function yellowsFunction() {
-    if((yellows).value == yellows){
+    matchResults();
+    if((yellows).value == yellowsTrue){
         cardsScore.innerHTML = Number(cardsScore.innerHTML) + 10;
     }
-    else if(yellows +2 <= (yellows).value <= yellows +2){
+    /*else if((yellowsTrue + 2) >= (yellows).value <= (yellowsTrue + 2)){
         cardsScore.innerHTML = Number(cardsScore.innerHTML) + 5;
-    }
+    }*/
 }
 
 function firstGoalscorerFunction() {
-    if((firstGoalscorer).value == firstGoalscorer){
-        goalScorerScore.innerHTML = Number(goalScorerScore.innerHTML) + 5;
+    matchResults();
+    if((firstGoalscorer).value == firstGoalscorerTrue){
+        goalScorerScore.innerHTML = Number(goalScorerScore.innerHTML) + 20 ;
     }
 }
 
 function yesRedFunction() {
-    if((yesRed).value == yesRed){
+    matchResults();
+    if((yesRed).value == yesRedTrue){
         cardsScore.innerHTML = Number(cardsScore.innerHTML) + 10;
     }
     else {
@@ -92,11 +141,11 @@ function yesRedFunction() {
 }
 
 function lineupFunction() {
-    var starting11;
-    var lineupTrue;
+    matchResults();
+
     var sum = 0;
 
-    for(var i = 0; i < starting11.length; i++){
+    for(var i = 0; i < starting11.length ; i++){
         for(var x = 0; x < lineupTrue.length; x++){
             if(starting11[i] == lineupTrue[x]){
                 sum++;
@@ -113,35 +162,3 @@ function lineupFunction() {
     }
 }
 
-// match results
-function matchResults() {
-
-
-
-if(opponent.value == 1 /*psg*/){
-    goalsLiverpool = 3;
-    goalsOpponent = 2;
-    goalMinute = 30;
-    yellows = 2;
-    firstGoalscorer = 8;
-    yesRed = 'yes';
-    noRed = 0;
-    lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 7, 23];
-
-}
-else if(opponent.value == 2 /*everton*/){
-
-}
-
-else if(opponent.value == 3 /*burnley*/){
-
-}
-
-else if(opponent.value == 4 /*leicester*/){
-
-}
-
-else if(opponent.value == 5 /*southampton*/){
-
-}
-}
