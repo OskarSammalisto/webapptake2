@@ -154,7 +154,7 @@
             </div>
         </div>
     </div>
-    <form>  <!--  action= "http://primat.se/services/sendform.aspx?recipient=johnbonham8888@gmail.com" method="post" -->
+    <form id="form">  <!--  action= "http://primat.se/services/sendform.aspx?recipient=johnbonham8888@gmail.com" method="post" -->
 <div class="row">
 
     <div class="col-sm-4 col-xs-12 col-lg-3" id="guess">
@@ -169,12 +169,12 @@
             <tbody>
             <tr>
                 <td colspan="2" align="centre" ><select name="Selectopponent" title="Selectopponent" id="opponent">
-                    <option value="" disabled selected>Select opponent.</option>
-                    <option value="PSG" >PSG</option>
-                    <option value="Everton" >Everton</option>
-                    <option value="Burnley" >Burnley</option>
-                    <option value="Leicester" >Leicester</option>
-                    <option value="Southampton" >Southampton</option>
+                    <option value="0" disabled selected>Select opponent.</option>
+                    <option value="1" id="psg" >PSG</option>
+                    <option value="2" id="everton" >Everton</option>
+                    <option value="3" id="burnley" >Burnley</option>
+                    <option value="4" id="leicester" >Leicester</option>
+                    <option value="5" id="southampton" >Southampton</option>
                 </select>
             </tr>
             <tr>
@@ -199,33 +199,33 @@
                     <select name="FirstGoalscorer" id="firstGoalscorer" title="FirstGoalscorer" class="selectpicker">
                     <option value="0">First Goalscorer</option>
                     <option value="1" >No Goals</option>
-                        <option value="1">Lallana</option>
-                        <option value="2">Moreno</option>
-                        <option value="3">Chamberlain</option>
-                        <option value="4">Alisson</option>
-                        <option value="5">Robertson</option>
-                        <option value="6">Jones</option>
-                        <option value="7">Sturridge</option>
-                        <option value="8">Lovren</option>
-                        <option value="9">Origi</option>
-                        <option value="10">Solanke</option>
-                        <option value="11">Fabinho</option>
-                        <option value="12">Wijnaldum</option>
-                        <option value="13">Milner</option>
-                        <option value="14">Matip</option>
-                        <option value="15">Henderson</option>
-                        <option value="16">Gomez</option>
-                        <option value="17">Grabara</option>
-                        <option value="18">Salah</option>
-                        <option value="19">Keita</option>
-                        <option value="20">Clyne</option>
-                        <option value="21">Brewster</option>
-                        <option value="22">Firmino</option>
-                        <option value="23">Mané</option>
-                        <option value="24">Mignolet</option>
-                        <option value="25">Arnold</option>
-                        <option value="26">Van Dijk</option>
-                        <option value="27">Shaqiri</option>
+                        <option value="2">Lallana</option>
+                        <option value="3">Moreno</option>
+                        <option value="4">Chamberlain</option>
+                        <option value="5">Alisson</option>
+                        <option value="6">Robertson</option>
+                        <option value="7">Jones</option>
+                        <option value="8">Sturridge</option>
+                        <option value="9">Lovren</option>
+                        <option value="10">Origi</option>
+                        <option value="11">Solanke</option>
+                        <option value="12">Fabinho</option>
+                        <option value="13">Wijnaldum</option>
+                        <option value="14">Milner</option>
+                        <option value="15">Matip</option>
+                        <option value="16">Henderson</option>
+                        <option value="17">Gomez</option>
+                        <option value="18">Grabara</option>
+                        <option value="19">Salah</option>
+                        <option value="20">Keita</option>
+                        <option value="21">Clyne</option>
+                        <option value="22">Brewster</option>
+                        <option value="23">Firmino</option>
+                        <option value="24">Mané</option>
+                        <option value="25">Mignolet</option>
+                        <option value="26">Arnold</option>
+                        <option value="27">Van Dijk</option>
+                        <option value="28">Shaqiri</option>
 
                 </select></td>
             </tr>
@@ -254,7 +254,7 @@
                 <div class="col-xs-12 player" align="center"  id="gk">
 
                     <img id="image1" src='noplayer.png' class="responsive1"><br>
-                    <select name="GK" id="changeImage1">
+                    <select class="starting11" name="GK" id="changeImage1">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -331,7 +331,7 @@
             <div class="row" id="dfrow">
                 <div class="col-xs-3 player" align="center" id="rb">
                     <img id="image2" src='noplayer.png' class="responsive4"><br>
-                    <select name="RB" id="changeImage2">
+                    <select class="starting11" name="RB" id="changeImage2">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -402,7 +402,7 @@
                 </div>
                 <div class="col-xs-3 player" align="center" id="cd1">
                     <img id="image3" src='noplayer.png' class="responsive4"><br>
-                    <select name="CB1" id="changeImage3">
+                    <select class="starting11" name="CB1" id="changeImage3">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -472,7 +472,7 @@
                 </div>
                 <div class="col-xs-3 player" align="center" id="cd2">
                     <img id="image4" src='noplayer.png' class="responsive4"><br>
-                    <select name="CB2" id="changeImage4">
+                    <select class="starting11" name="CB2" id="changeImage4">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -542,7 +542,7 @@
                 </div>
                 <div class="col-xs-3 player" align="center" id="lb">
                     <img id="image5" src='noplayer.png' class="responsive4"><br>
-                    <select name="LB" id="changeImage5">
+                    <select class="starting11" name="LB" id="changeImage5">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -614,7 +614,7 @@
             <div class="row" id="mfrow">
                 <div class="col-xs-3 player" align="center" id="rw">
                     <img id="image6" src='noplayer.png' class="responsive4"><br>
-                    <select name="RW" id="changeImage6">
+                    <select class="starting11" name="RW" id="changeImage6">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -684,7 +684,7 @@
                 </div>
                 <div class="col-xs-3 player" align="center" id="mf1">
                     <img id="image7" src='noplayer.png' class="responsive4"><br>
-                    <select name="MF1" id="changeImage7">
+                    <select class="starting11" name="MF1" id="changeImage7">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -754,7 +754,7 @@
                 </div>
                 <div class="col-xs-3 player" align="center" id="mf2">
                     <img id="image8" src='noplayer.png' class="responsive4"><br>
-                    <select name="MF" id="changeImage8">
+                    <select class="starting11" name="MF" id="changeImage8">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -824,7 +824,7 @@
                 </div>
                 <div class="col-xs-3 player" align="center" id="lw">
                     <img id="image9" src='noplayer.png' class="responsive4"><br>
-                    <select name="LW" id="changeImage9">
+                    <select class="starting11" name="LW" id="changeImage9">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -896,7 +896,7 @@
             <div class="row" id="strow">
                 <div class="col-xs-6 player" align="center" id="st1">
                     <img id="image10" src='noplayer.png' class="responsive4"><br>
-                    <select name="ST1" id="changeImage10">
+                    <select class="starting11" name="ST1" id="changeImage10">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>
@@ -966,7 +966,7 @@
                 </div>
                 <div class="col-xs-6 player" align="center" id="st2">
                     <img id="image11" src='noplayer.png' class="responsive4"><br>
-                    <select name="ST2" id="changeImage11">
+                    <select class="starting11" name="ST2" id="changeImage11">
                         <option value="0">image 0</option>
                         <option value="1">Lallana</option>
                         <option value="2">Moreno</option>

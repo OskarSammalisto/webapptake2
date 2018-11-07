@@ -27,10 +27,13 @@ function calculate() {
     yellowsFunction();
     firstGoalscorerFunction();
     yesRedFunction();
+    var p = opponent.value;
+    document.getElementById("opponent").options[p].disabled = true;
+    document.getElementById('form').reset();
 }
 
 function goalsLiverpoolFunction() {
-    if((goalsLiverpool).value == 'Refer to resultsheet'){
+    if((goalsLiverpool).value == 'refer to resultsheet'){
         resultScore.innerHTML = Number(resultScore.innerHTML) + 5;
 
     }
