@@ -1,14 +1,14 @@
 // guessboard
 
 var opponent = document.getElementById('opponent');
-var goalsLiverpool = document.getElementById(('goalsLiverpool'));
+var goalsLiverpool = document.getElementById('goalsLiverpool');
 var goalsOpponent = document.getElementById('goalsOpponent');
 var goalMinute = document.getElementById('goalMinute');
 var yellows = document.getElementById('yellows');
 var firstGoalscorer = document.getElementById('firstGoalscorer');
 var yesRed = document.getElementById('yesRed');
 var noRed = document.getElementById('noRed');
-var starting11 = document.getElementsByClassName(('starting11').value);
+var starting11 = document.getElementsByClassName('starting11');
 
 // scoreboard
 
@@ -27,7 +27,7 @@ var yellowsTrue;
 var firstGoalscorerTrue;
 var yesRedTrue;
 var noRedTrue = 0;
- console.log(opponent);
+ //console.log(lineupTrue);
 //functions
 
 // match results
@@ -41,7 +41,7 @@ function matchResults() {
          goalMinuteTrue = 30;
          yellowsTrue = 2;
          firstGoalscorerTrue = 8;
-         yesRedTrue = 'yes';
+         yesRedTrue = 'Yes';
          noRedTrue = 0;
          lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 7, 23];
 
@@ -98,7 +98,7 @@ function goalsOpponentFunction() {
     }
 }
 
-function goalMinuteFunction() {
+function goalMinuteFunction() {  //this needs fixing
     matchResults();
     if((goalMinute).value == goalMinuteTrue){
         goalMinuteScore.innerHTML = Number(goalMinuteScore.innerHTML) + 20;
@@ -117,7 +117,7 @@ function yellowsFunction() {
     if((yellows).value == yellowsTrue){
         cardsScore.innerHTML = Number(cardsScore.innerHTML) + 10;
     }
-    /*else if((yellowsTrue + 2) >= (yellows).value <= (yellowsTrue + 2)){
+    /*else if((yellowsTrue + 2) >= (yellows).value <= (yellowsTrue + 2)){ //this needs fixing
         cardsScore.innerHTML = Number(cardsScore.innerHTML) + 5;
     }*/
 }
@@ -129,7 +129,7 @@ function firstGoalscorerFunction() {
     }
 }
 
-function yesRedFunction() {
+function yesRedFunction() { //this needs fixing
     matchResults();
     if((yesRed).value == yesRedTrue){
         cardsScore.innerHTML = Number(cardsScore.innerHTML) + 10;
@@ -140,7 +140,7 @@ function yesRedFunction() {
 
 }
 
-function lineupFunction() {
+function lineupFunction() { //this needs fixing
     matchResults();
 
     var sum = 0;
@@ -152,6 +152,8 @@ function lineupFunction() {
             }
         }
     }
+    console.log(starting11);
+    console.log(lineupTrue);
 
     if(sum == 11){
         sum = 30;
