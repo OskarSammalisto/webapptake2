@@ -82,6 +82,10 @@ body{
         height: auto;
     }
 
+    #noRed{
+        display: flex;
+    }
+
 }
 
 
