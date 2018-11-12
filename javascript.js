@@ -51,9 +51,9 @@ function matchResults() {
     else if(opponent.value == 2 /*everton*/){
         goalsLiverpoolTrue = 0;
         goalsOpponentTrue = 0;
-        goalMinuteTrue = 30;
-        yellowsTrue = 2;
-        firstGoalscorerTrue = 8;
+        goalMinuteTrue = 100;
+        yellowsTrue = 0;
+        firstGoalscorerTrue = 1;
         RedTrue = 0;
 
         lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 7, 23];
@@ -61,26 +61,26 @@ function matchResults() {
     }
 
     else if(opponent.value == 3 /*burnley*/){
-        goalsLiverpoolTrue = 0;
-        goalsOpponentTrue = 0;
-        goalMinuteTrue = 30;
-        yellowsTrue = 2;
-        firstGoalscorerTrue = 8;
+        goalsLiverpoolTrue = 2;
+        goalsOpponentTrue = 1;
+        goalMinuteTrue = 61;
+        yellowsTrue = 0;
+        firstGoalscorerTrue = 24;
         RedTrue = 0;
 
-        lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 7, 23];
+        lineupTrue = [24, 25, 8, 26, 5, 12, 15, 13, 3, 10, 23];
 
     }
 
     else if(opponent.value == 4 /*leicester*/){
-        goalsLiverpoolTrue = 0;
-        goalsOpponentTrue = 0;
-        goalMinuteTrue = 30;
-        yellowsTrue = 2;
-        firstGoalscorerTrue = 8;
+        goalsLiverpoolTrue = 2;
+        goalsOpponentTrue = 1;
+        goalMinuteTrue = 10;
+        yellowsTrue = 5;
+        firstGoalscorerTrue = 24;
         RedTrue = 0;
 
-        lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 7, 23];
+        lineupTrue = [4, 25, 16, 26, 5, 12, 15, 13, 18, 22, 23];
 
     }
 
