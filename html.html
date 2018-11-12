@@ -77,13 +77,25 @@
 
 
     <!--<div class="col-sm-6" id="match"><img src="watliv.jpg" class="img-responsive"></div>-->
-    <div class="col-sm-3 d-none d-sm-block col-lg-3" align="center" id="user"><img src="clipart2103074456.png" class="img-responsive"  width="125" height="175"></div>
+    <div class="col-sm-3 d-none d-sm-block col-lg-3 dropdown" align="center" id="backgroundmenu"><img src="backgrounds/background.jpg" class="img-responsive"  width="200" height= auto>
+        <div class="dropdown-content">
+            <img src="backgrounds/background.jpg" onclick="background()" alt="default background" width="200" height="auto"><br>
+            <img src="backgrounds/background1.jpg" onclick="background1()" alt="background 1" width="200" height="auto"><br>
+            <img src="backgrounds/background2.jpg" onclick="background2()" alt="background 2" width="200" height="auto"><br>
+            <img src="backgrounds/background3.jpg" onclick="background3()" alt="background 3" width="200" height="auto"><br>
+            <img src="backgrounds/background4.jpg" onclick="background4()" alt="background 4" width="200" height="auto"><br>
+            <img src="backgrounds/background5.jpg" onclick="background5()" alt="background 5" width="200" height="auto"><br>
+
+        </div>
+
+
+    </div>
 
 </div>
         <div class="btn-group">
-            <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#myModal">How to play?</button>
-            <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#myModal2">Scoring?</button>
-            <button type="button" class="btn btn-info btn-primary" data-toggle="modal" data-target="#myModal3">Empty</button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">How to play?</button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal2">Scoring?</button>
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal3">Info</button>
         </div>
         <div id="myModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
@@ -141,10 +153,12 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Empty</h4>
+                        <h4 class="modal-title">Contact</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Empty.</p>
+                        <p>Óskar Örn Einarsson Sammalisto.<br>
+                           oskarornvs@gmail.com
+                        </p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

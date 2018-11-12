@@ -1,6 +1,6 @@
 body{
     background-size: cover;
-    background: darkred url("anfield2.jpg") no-repeat center center;
+    background: darkred url("backgrounds/background.jpg") no-repeat center center;
 
 }
 
@@ -16,10 +16,11 @@ body{
     justify-content: center;
 }
 
-#user{
+#backgroundmenu{
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 30px;
 
 }
 
@@ -39,6 +40,23 @@ body{
     background-size: contain;
 
 
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 27.5%;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 
 }
 

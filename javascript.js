@@ -49,8 +49,8 @@ function matchResults() {
 
     }
     else if(opponent.value == 2 /*everton*/){
-        goalsLiverpoolTrue = 3;
-        goalsOpponentTrue = 2;
+        goalsLiverpoolTrue = 0;
+        goalsOpponentTrue = 0;
         goalMinuteTrue = 30;
         yellowsTrue = 2;
         firstGoalscorerTrue = 8;
@@ -61,8 +61,8 @@ function matchResults() {
     }
 
     else if(opponent.value == 3 /*burnley*/){
-        goalsLiverpoolTrue = 3;
-        goalsOpponentTrue = 2;
+        goalsLiverpoolTrue = 0;
+        goalsOpponentTrue = 0;
         goalMinuteTrue = 30;
         yellowsTrue = 2;
         firstGoalscorerTrue = 8;
@@ -73,8 +73,8 @@ function matchResults() {
     }
 
     else if(opponent.value == 4 /*leicester*/){
-        goalsLiverpoolTrue = 3;
-        goalsOpponentTrue = 2;
+        goalsLiverpoolTrue = 0;
+        goalsOpponentTrue = 0;
         goalMinuteTrue = 30;
         yellowsTrue = 2;
         firstGoalscorerTrue = 8;
@@ -221,5 +221,31 @@ function lineupFunction() { //this needs fixing
     else {
         lineupScore.innerHTML = Number(lineupScore.innerHTML) + (sum * 2);
     }
+}
+
+//change background
+
+function background(){
+    document.body.style.backgroundImage = "url('backgrounds/background.jpg')";
+}
+
+function background1(){
+    document.body.style.backgroundImage = "url('backgrounds/background1.jpg')";
+}
+
+function background2(){
+    document.body.style.backgroundImage = "url('backgrounds/background2.jpg')";
+}
+
+function background3(){
+    document.body.style.backgroundImage = "url('backgrounds/background3.jpg')";
+}
+
+function background4(){
+    document.body.style.backgroundImage = "url('backgrounds/background4.jpg')";
+}
+
+function background5(){
+    document.body.style.backgroundImage = "url('backgrounds/background5.jpg')";
 }
 
